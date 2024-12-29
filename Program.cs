@@ -8,6 +8,8 @@ using static SDL2.SDL_image;
 using static SDL2.SDL_ttf;
 using static SDL2.SDL_mixer;
 using SDL2.SDL_Image_Extensions.Ora;
+using System.Runtime.InteropServices;
+using SDL2.SDL_Extensions;
 
 class Program
 {
@@ -44,10 +46,21 @@ class Program
 
                     var fi = new FileInfo(l.Src);
                     var match = zipArchive.Entries.FirstOrDefault(e => e.Name.Equals(fi.Name, StringComparison.OrdinalIgnoreCase));
-                    match.ExtractToFile(fi.FullName);
-                    var texture = IMG_LoadTexture(renderer, match.Name);
-                    fi.Delete();
-                    return new KeyValuePair<string, IntPtr>(new FileInfo(zipFilePath).Name + '/' + fi.Name, texture);
+                    byte[] bytes;
+                    using (var stream = match.Open())
+                    using (var ms = new MemoryStream())
+                    {
+                        stream.CopyTo(ms);
+                        bytes = ms.ToArray();
+                    }
+                    //match.ExtractToFile(fi.FullName);
+                    GCHandle pinnedArray = GCHandle.Alloc(bytes, GCHandleType.Pinned);
+                    IntPtr pointer = pinnedArray.AddrOfPinnedObject();
+                    using Surface surfacePtr = new(IMG_Load_RW(SDL_RWFromMem(pointer, bytes.Length), 0));
+                    using Texture texture = new(SDL_CreateTextureFromSurface(renderer, surfacePtr.Value));
+                    pinnedArray.Free();
+
+                    return new KeyValuePair<string, IntPtr>(new FileInfo(zipFilePath).Name + '/' + fi.Name, texture.Value);
                     // return memoryStream.ToArray();
                 }).ToList();//.ToDictionary<string, IntPtr>(x=>x.Key, x=>x.Value);
                 textureData.ForEach(kvp =>
