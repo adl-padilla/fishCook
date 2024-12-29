@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ImeSense.Packages.Sdl.Runtimes.linux-x64" Version="2.28.5.2" />
+    <PackageReference Include="ImeSense.Packages.Sdl.Runtimes.osx-arm64" Version="2.28.5.2" />
+    <PackageReference Include="ImeSense.Packages.Sdl.Runtimes.osx-x64" Version="2.28.5.2" />
+    <PackageReference Include="ImeSense.Packages.Sdl.Runtimes.win-x64" Version="2.28.5.2" />
+    <PackageReference Include="ImeSense.Packages.Sdl.Runtimes.win-x86" Version="2.28.5.2" />
+    <PackageReference Include="Sayers.SDL2.Core" Version="1.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="assets\Card-Fronts-1.ora" />
+    <None Remove="assets\Card-Fronts-2.ora" />
+    <None Remove="assets\Card-Fronts-3.ora" />
+    <None Remove="assets\Card-Fronts-4.ora" />
+    <None Remove="assets\Card-Fronts-5.ora" />
+    <None Remove="assets\Card-Fronts-6.ora" />
+    <None Remove="assets\Card-Fronts-7.ora" />
+    <None Remove="assets\Card-Fronts-8.ora" />
+    <None Remove="assets\Card-Fronts-9.ora" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\Card-Fronts-1.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-2.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-3.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-4.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-5.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-6.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-7.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-8.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Card-Fronts-9.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
