@@ -4,3 +4,4 @@ obj
 *.pdf
 *.zip
 .vs
+log.txt

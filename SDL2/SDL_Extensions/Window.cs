@@ -32,7 +32,7 @@ public class Window : SDLPointer<Window>, IDisposable
         var texture = Renderer.LoadTexture(fullName);
         if (texture.Value == IntPtr.Zero)
         {
-            SDL_LogInfo(0, $"There was an issue with creating texture. {SDL_GetError()}");
+            SDL_LogInfo(0, $"There was an issue with creating texture. {SDL_GetError()} {fullName}");
         }
         return texture;
     }

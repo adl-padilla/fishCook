@@ -17,42 +17,68 @@
     <PackageReference Include="Sayers.SDL2.Core" Version="1.0.11" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="assets\Card-Fronts-1.ora" />
-    <None Remove="assets\Card-Fronts-2.ora" />
-    <None Remove="assets\Card-Fronts-3.ora" />
-    <None Remove="assets\Card-Fronts-4.ora" />
-    <None Remove="assets\Card-Fronts-5.ora" />
-    <None Remove="assets\Card-Fronts-6.ora" />
-    <None Remove="assets\Card-Fronts-7.ora" />
-    <None Remove="assets\Card-Fronts-8.ora" />
-    <None Remove="assets\Card-Fronts-9.ora" />
+    <None Remove="assets\Recipes\Recipe-1.ora" />
+    <None Remove="assets\Recipes\Recipe-2.ora" />
+    <None Remove="assets\Recipes\Recipe-3.ora" />
+    <None Remove="assets\Recipes\Recipe-4.ora" />
+    <None Remove="assets\Recipes\Recipe-5.ora" />
+    <None Remove="assets\Recipes\Recipe-6.ora" />
+    <None Remove="assets\Recipes\Recipe-7.ora" />
+    <None Remove="assets\Recipes\Recipe-8.ora" />
+    <None Remove="assets\Recipes\Recipe-9.ora" />
+    
+    <None Remove="assets\Dice\d6-1.png" />
+    <None Remove="assets\Dice\d6-2.png" />
+    <None Remove="assets\Dice\d6-3.png" />
+    <None Remove="assets\Dice\d6-4.png" />
+    <None Remove="assets\Dice\d6-5.png" />
+    <None Remove="assets\Dice\d6-6.png" />
+
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\Card-Fronts-1.ora">
+    <Content Include="assets\Recipes\Recipe-1.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-2.ora">
+    <Content Include="assets\Recipes\Recipe-2.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-3.ora">
+    <Content Include="assets\Recipes\Recipe-3.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-4.ora">
+    <Content Include="assets\Recipes\Recipe-4.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-5.ora">
+    <Content Include="assets\Recipes\Recipe-5.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-6.ora">
+    <Content Include="assets\Recipes\Recipe-6.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-7.ora">
+    <Content Include="assets\Recipes\Recipe-7.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-8.ora">
+    <Content Include="assets\Recipes\Recipe-8.ora">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\Card-Fronts-9.ora">
+    <Content Include="assets\Recipes\Recipe-9.ora">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+        <Content Include="assets\Dice\d6-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Dice\d6-2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Dice\d6-3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Dice\d6-4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Dice\d6-5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\Dice\d6-6.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
